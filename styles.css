@@ -18,6 +18,17 @@
 
 }
 
+
+.bodyWithBackgroundImage3{
+
+    background-image: url(assets/background_image7.jpeg);
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: flex-end;
+
+}
+
 .defaultLabels{
 
     background-color: red;
@@ -40,6 +51,24 @@
     font-family: 'Creepster', cursive;
 }
 
+.defaultP{
+    background-color: red;
+    width: 350px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
 .center {
     position: absolute;
     top: 50%;
@@ -52,13 +81,64 @@
     display:  grid;
     grid-template-rows: repeat(4, 1fr);
     align-content: center;
+}
+
+
+.gameplayPageContainerGridLayout{
+
+    display:  grid;
+    grid-template-columns: 260px, 1fr;
+    align-content: center;
+
+}
+
+.gameplayPageDivLayout{
+    display:  grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
 
 }
 
 .audioButton{
-    align-content: flex-end;
+
+   align-content: center;
    height: 50px;
    width: 50px;
-   background: url(assets/sound_on.png);
+   background-color: white;
 }
 
+.audioButton ::hover{
+    cursor: wait;
+}
+
+.footerLayout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+.largeText{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+.leftAlignedText{
+    align-content: center;
+}
+
+.rightAlignedText{
+    align-content: center, ;
+}
+
+.wizardImage{
+
+    height: 120px;
+    width: 105px;
+    background-image: url(assets/wizard_sprite_rotated_no_bg.png);
+    align-content: center;
+    background-size: 128px auto;
+}
