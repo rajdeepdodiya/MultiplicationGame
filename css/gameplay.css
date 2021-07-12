@@ -1,33 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Benne&family=Big+Shoulders+Stencil+Display&family=Creepster&display=swap');
 
-.bodyWithBackgroundImage1{
-
-    background-image: url(assets/bg_1.gif);
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-}
-
-.bodyWithBackgroundImage2{
-
-    background-image: url(assets/background_image2.jpeg);
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-
 .bodyWithBackgroundImage3{
 
-    background-image: url(assets/background_image7.jpeg);
+    background-image: url(../assets/background_image7.jpeg);
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
     align-content: flex-end;
 
 }
+
+
 
 .defaultLabels{
 
@@ -64,7 +47,7 @@
 p{
     text-transform: uppercase;
     color: white;
-    font-size: 22.5px;
+    font-size: 24px;
     text-align: center;
     font-family: 'Creepster', cursive;
 }
@@ -76,20 +59,22 @@ p{
     transform: translate(-50%, -50%);
     }
 
-.homePageGridLayout{
-
+.gameplayPageContainerGridLayout{
     display:  grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr, 200px;
     align-content: center;
+
 }
 
+.enemyDiv{
+    width: 80%;
+    float: left;
+}
 
-.gameplayPageContainerGridLayout{
-
-    display:  grid;
-    grid-template-columns: 260px, 1fr;
-    align-content: center;
-
+.wizardDiv{
+    width: 20%;
+    float: right;
+    align-items: flex-start;
 }
 
 .gameplayPageDivLayout{
@@ -107,10 +92,6 @@ p{
    background-color: white;
 }
 
-.audioButton ::hover{
-    cursor: wait;
-}
-
 .footerLayout{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -126,19 +107,11 @@ p{
     font-family: 'Creepster', cursive;
 }
 
-.leftAlignedText{
-    align-content: center;
-}
-
-.rightAlignedText{
-    align-content: center, ;
-}
-
 .wizardImage{
 
     height: 120px;
-    width: 105px;
-    background-image: url(assets/wizard_sprite_rotated_no_bg.png);
-    align-content: center;
+    width: 120px;
+    background-image: url(../assets/wizard.png);
     background-size: 128px auto;
 }
+

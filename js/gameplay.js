@@ -1,64 +1,82 @@
 const level1Questions = ["10 * 12", "3 * 3", "14 * 3 ", "8 * 7"]
 const level2Questions = ["10 * 12", "3 * 3", "14 * 3 ", "8 * 7"]
+var questionsArray = [];
+var answersArray = [];
+const noOfEnemies = 5;
 
 var currentLevel = 1;
+var totalLevels = 5;
 var timer = 60;
 
-const loadquestions = () => {
+var audio = document.getElementById('audio')
 
-    var questions1Array = [];
-    for(let i = 0; i < 5 ; i++){
-        const randomNo = Math.floor(Math.random(10)) + 1;
-        console.log(randomNo)
-        questions1Array.append(randomNo);
+const toggleAudio = () => {
+    
+    let image = document.querySelector(".audioButton").src
+    console.log(image);
+    audio.paused ? document.querySelector(".audioButton").src="assets/sound_muted.png" : document.querySelector(".audioButton").src="assets/sound_on.png" ;
+    audio.paused ? audio.play() : audio.pause();
+
+}
+
+document.querySelector("#audio-button").addEventListener("click", toggleAudio);
+
+const generateQuestionsAndAnswers = () => {
+
+    for(let i = 0 ; i < noOfEnemies; i++){
+
+        const randomNumber1 = Math.floor(Math.random() * 15) + 1;
+        console.log(randomNumber1);
+        const randomNumber2 = Math.floor(Math.random() * 10) + 1;
+        console.log(randomNumber2)
+        const currentAnswer = randomNumber1 * randomNumber2;
+        console.log(currentAnswer)
+
+        questionsArray.push(randomNumber1+" * "+randomNumber2+" = ");
+     
+        answersArray.push(currentAnswer);
+        
     }
 
-    console.log(questions1Array);
+    console.log(questionsArray);
+    console.log(answersArray);
+}
+
+const loadWizard = () => {
+
+    let html = `<p>`+answersArray[currentLevel]+`</p>`;
+    return html;
+
+}
+
+
+const loadAllEnemies = (i) => {
+    let html = ``;
+
+    for (let i = 0; i < 5; i++){
+
+        html += `<p id=enemy_`+i+`>`+questionsArray[i]+`</p>`;
+    }
     
-    let html = `
-    <div>
-    <img class="wizardImage"> 
-    </div>
-
-    <div> 
-    <p class="largeText">3 + 2 = </p>
-    <p class="largeText">14 * 7 = </p>
-    <p class="largeText">12 - 12 + 2 = </p>
-    </div>
-    `;
-
     return html;
 }
 
 const startGame = () => {
 
-    document.querySelector(".gameplayPageContainerGridLayout").innerHTML = loadquestions
+    generateQuestionsAndAnswers();
 
-    // while(timer != 0 ){
-        
-    // }
+    document.querySelector(".gameplayPageContainerGridLayout").innerHTML = `
+    <div class="enemyDiv">`
+    +loadAllEnemies()+
+    `</div>`
+    +
+    `<div class="wizardDiv">
+    <img class="wizardImage">`
+    +loadWizard()+ 
+    `</div>
+    `;
     
 console.log("ok");
-}
-
-const moveWizard = (evt) => {
-
-    console.log("moveWizard");
-
-    if(evt.keyCode === 38){
-        alert("UP PRESSED");
-    }
-
-    else if(evt.keyCode === 40){
-        console.log("DOWN PRESSED");
-    }
-
-    else if(evt.keyCode === 32){
-        console.log("SPACE PRESSED");
-    }
 
 }
-
 startGame();
-
-document.querySelector("body").addEventListener("onkeydown", moveWizard)

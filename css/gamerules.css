@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Big+Shoulders+Stencil+Display&family=Creepster&display=swap');
+
+.bodyWithBackgroundImage2{
+
+    background-image: url(../assets/background_image2.jpeg);
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.defaultLabels{
+
+    background-color: red;
+    width: 200px;
+    height: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+.defaultInputStyle{
+
+    background-color: #EFEFEF;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    font-size: 22.5px;
+    font-family: 'Creepster', cursive;
+}
+
+.defaultP{
+    background-color: red;
+    width: 350px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+
+.gameplayPageContainerGridLayout{
+
+    display:  grid;
+    grid-template-columns: 128px, 1fr;
+    align-content: center;
+
+}
+
+.gameplayPageDivLayout{
+    display:  grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
+
+}
+
+.audioButton{
+
+   align-content: center;
+   height: 50px;
+   width: 50px;
+   background-color: white;
+}

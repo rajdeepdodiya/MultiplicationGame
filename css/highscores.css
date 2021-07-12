@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Big+Shoulders+Stencil+Display&family=Creepster&display=swap');
+
+.bodyWithBackgroundImage1{
+
+    background-image: url(../assets/bg_1.gif);
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+   
+}
+
+h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
