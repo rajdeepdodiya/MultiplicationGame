@@ -6,7 +6,7 @@ const updateSoundIcon = () => {
     let image = document.querySelector(".audioButton").src
     console.log(image);
 
-    if(isAudioPreferred){
+    if(isAudioPreferred == "true"){
         document.querySelector(".audioButton").src="assets/sound_muted.png"
     }
     else{
@@ -20,12 +20,12 @@ const toggleAudio = () => {
     audio.paused ? audio.play() : audio.pause();
     
     if(audio.paused){
-        isAudioPreferred = false
+        isAudioPreferred = "false"
         localStorage.setItem("isAudioPreferred", false);
     }
 
     else{
-        isAudioPreferred = true
+        isAudioPreferred = "true"
         localStorage.setItem("isAudioPreferred", true);
     }
 

@@ -6,7 +6,7 @@ const updateSoundIcon = () => {
     let image = document.querySelector(".audioButton").src
     console.log(image);
 
-    if(isAudioPreferred){
+    if(isAudioPreferred == "true"){
         document.querySelector(".audioButton").src="assets/sound_muted.png"
     }
     else{
