@@ -8,23 +8,34 @@
 
     <link rel="stylesheet" href="css/gameplay.css">
 
+    <script type="text/javascript" src="js/gameplay.js" defer></script>
+
 </head>
-<body class="bodyWithBackgroundImage3">
+<body">
 
-<audio id="audio" src="assets/Spooky Halloween Background Music.mp3">  </audio>
+    <audio id="audio" src="assets/Spooky Halloween Background Music.mp3">  </audio>
+    <button id="audio-button" ><img class="audioButton" src="assets/sound_muted.png"></button>
 
-<button id="audio-button" ><img class="audioButton" src="assets/sound_muted.png"></button>
+    <main>
 
-    <div class="gameplayPageContainerGridLayout">
-      
-    </div>
+    </main>
+
+
+    <!-- <div class="gameOver center" >
+        <h1>Game Over</h1>
+        <button class="center-Horizontally">Play Again</button><br>
+        <button class="center-Horizontally" onclick="playAgainClicked">View Highscores</button><br>        
+    </div> -->
+
+    
+
 
     <footer class="footerLayout">
-        <p>Level 1 of 5</p>
-        <p>Time remaining: 12</p>
+        <p id="currentLevel">Level 1 of 5</p>
+        <p id="remainingTime">Time remaining: 60</p>
         
     </footer>
     
-    <script type="text/javascript" src="js/gameplay.js"></script>
+    
 </body>
 </html>
