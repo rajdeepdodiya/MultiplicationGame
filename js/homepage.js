@@ -25,7 +25,6 @@ const toggleAudio = () => {
     }
 
     else{
-
         isAudioPreferred = true
         localStorage.setItem("isAudioPreferred", true);
     }
@@ -38,10 +37,17 @@ const toggleAudio = () => {
 const getAudioPreferences = () => {
 
     isAudioPreferred = localStorage.getItem("isAudioPreferred");
+    localStorage.setItem("isAudioPreferred", true);
     console.log("getAudioPreferences : isAudioPreferred : "+isAudioPreferred);
 
     //true
-    if(isAudioPreferred == "true"){
+
+    if(isAudioPreferred === null){
+        console.log("getAudioPreferences() - null but : playing audio");
+        audio.play();
+    }
+
+    else if(isAudioPreferred == "true"){
         console.log("getAudioPreferences(): playing audio");
         audio.play();
     }
