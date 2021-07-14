@@ -6,6 +6,9 @@
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -55,6 +58,14 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     }
+
+ .center-Horizontally
+{
+    left: 50%;
+    position: relative;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 
 
 .gameplayPageContainerGridLayout{
