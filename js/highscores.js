@@ -8,31 +8,43 @@ const getHighScoresFromLocalDb = () => {
     // const scoresList = {"Rd", 1};
     // localStorage.setItem("HighScores", scoresList);
 
+    let scoresList = []
+
     if("HighScores" in localStorage){
 
-        const scoresList = JSON.parse(localStorage.getItem("HighScores"));
-        console.log("SCORES: "+list);
+        scoresList = JSON.parse(localStorage.getItem("HighScores"));
 
-        document.querySelectorAll("highScoresContainer").innerHTML = `<div>
+        if (scoresList === null)
+        {
+            scoresList = []
+        }
+
+        console.log("SCORES: "+scoresList);
+        let highScoresContainer = document.querySelector(".highScoresContainer")
+
+        let innerHTML = ""
+
+        innerHTML += `<table>
         <tr>
-        <th> Rank </tr>
-        <th> NAME </tr>
-        <th> SCORE </tr>
+        <th> Rank </th>
+        <th> NAME </th>
+        <th> SCORE </th>
         </tr>       
-        </div>
         `
 
-        for(let i = 0 ; i < scoresList.size(); i++){
+        for(let i = 0 ; i < scoresList.length; i++){
 
-            document.querySelector("#highScoresContainer").innerHTML += `<div>
+            innerHTML += `
             <tr>
-            <td> <p> `+i+`. </p> </td>
-            <td> <p> `+scoresList[i].getName+` </p> </td>
-            <td> <p> `+scoresList[i].getScore+` </p> </td>
-            </tr>
-            </div>
-            `
+            <td>`+`${i+1}`+` </td>
+            <td>`+scoresList[i].name+`</td>
+            <td>`+scoresList[i].score+`</td>
+            </tr> `
         }
+
+        innerHTML += `</table>`
+
+        highScoresContainer.innerHTML = innerHTML
 
     }
 

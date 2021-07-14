@@ -18,7 +18,7 @@ h1{
     font-family: 'Creepster', cursive;
 }
 
-p, th{
+p, th, td {
     text-transform: uppercase;
     color: white;
     font-size: 35px;
