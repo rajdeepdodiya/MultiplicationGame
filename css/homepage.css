@@ -42,6 +42,14 @@
     font-family: 'Creepster', cursive;
 }
 
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 40.5px;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+}
+
 p{
     text-transform: uppercase;
     color: white;
